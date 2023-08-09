@@ -1,0 +1,15 @@
+<h3>Results</h3>
+<ul class="list-none m0 p0">
+  {{range .Results}}
+  <li>
+    <button
+      hx-get="/values/{{.Ticker}}"
+      hx-tigger="click"
+      hx-target="#stock-details"
+    >
+      {{.Name}}
+    </button>
+    <div id="stock-details"></div>
+  </li>
+  {{end}}
+</ul>
